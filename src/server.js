@@ -3,7 +3,7 @@ const express = require("express")
 const app =  express()
 
 app.get("/message/:id", (request, response) => {
-  response.send("Hello World")
+  response.send(`Message's ID: ${request.params.id}`)
 })
 
 const PORT = 3333
