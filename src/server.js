@@ -2,13 +2,6 @@ const express = require("express")
 
 const app =  express()
 
-app.get("/message/:id/:user", (request, response) => {
-  const { id, user } = request.params
-  response.send(`
-  Message's ID: ${id},
-  User's name: ${ user}
-  `)
-})
 
 app.get("/users", (request,response) =>{
   const { page, limit } = request.query
