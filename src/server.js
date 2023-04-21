@@ -7,7 +7,10 @@ app.post("/users", (request,response) =>{
 
   const { name, email, password } =request.body
   
-  response.send(`Você chamou o POST`)
+  response.send(`
+  User's name: ${name},
+  User's email: ${email},
+  User's password: ${password}`)
 })
 
 const PORT = 3333
