@@ -4,7 +4,7 @@ const app =  express()
 
 
 app.post("/users", (request,response) =>{
-  const { page, limit } = request.query
+  
   response.send(`Página: ${page} e Limite: ${limit}`)
 })
 
