@@ -4,6 +4,8 @@ const app =  express()
 
 
 app.post("/users", (request,response) =>{
+
+  const { name, email, password } =request.body
   
   response.send(`Você chamou o POST`)
 })
