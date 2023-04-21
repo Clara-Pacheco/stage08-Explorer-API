@@ -5,7 +5,7 @@ const app =  express()
 
 app.post("/users", (request,response) =>{
   
-  response.send(`Página: ${page} e Limite: ${limit}`)
+  response.send(`Você chamou o POST`)
 })
 
 const PORT = 3333
