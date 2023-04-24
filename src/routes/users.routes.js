@@ -7,6 +7,19 @@ const usersController = new UsersController()
 const usersRoutes = Router()
 
 
-usersRoutes.post("/", usersController.create )
+function myMiddleware(request,response,next){
+
+  console.log("Passou pelo middleware!")
+
+  if(!request.body.isAdmin){
+    return response.json({"message": "usuário não autorizado"})
+  }
+
+  next()
+
+}
+
+
+usersRoutes.post("/", myMiddleware, usersController.create )
 
 module.exports = usersRoutes
